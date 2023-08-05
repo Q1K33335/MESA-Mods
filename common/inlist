@@ -27,6 +27,8 @@
 
 
 &controls
+  initial_z = 0.014
+
   default_net_name = 'mesa_49.net'
   mesh_delta_coeff = 1.35d0
   time_delta_coeff = 1.35d0
