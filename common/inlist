@@ -54,6 +54,6 @@
 
 
 &pgstar
-  Grid1_win_flag = .true.
-  Grid1_win_width = 10.5
+  Grid6_win_flag = .true.
+  Grid6_win_width = 11
 / ! end of pgstar namelist
