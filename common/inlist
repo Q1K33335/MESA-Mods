@@ -12,8 +12,6 @@
 
   read_extra_star_job_inlist1 = .true.
   extra_star_job_inlist1_name = 'inlist_change'
-
-  pgstar_flag = .true.
 / ! end of star_job namelist
 
 
