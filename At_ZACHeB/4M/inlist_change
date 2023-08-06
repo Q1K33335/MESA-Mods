@@ -1,0 +1,14 @@
+&star_job
+
+/ ! end of star_job namelist
+
+&controls
+	initial_mass = 4
+
+	cool_wind_RGB_scheme = 'Reimers'
+	Reimers_scaling_factor = 0.4
+	cool_wind_AGB_scheme = ''
+
+	xa_central_upper_limit_species(1) = 'c12'
+	xa_central_upper_limit(1) = 0.01
+/ ! end of controls namelist
