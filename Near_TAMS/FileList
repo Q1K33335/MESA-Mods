@@ -1,1 +1,8 @@
-t
+../common/make/*
+../common/src/*
+../common/inlist
+./*/inlist_change
+../common/clean
+../common/mk
+../common/re
+rn
