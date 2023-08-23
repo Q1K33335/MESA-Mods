@@ -1,0 +1,76 @@
+! inlist to evolve a 15 solar mass star
+
+! For the sake of future readers of this file (yourself included),
+! ONLY include the controls you are actually using.  DO NOT include
+! all of the other controls that simply have their default values.
+
+&star_job
+  ! see star/defaults/star_job.defaults
+
+  ! begin with a pre-main sequence model
+    create_pre_main_sequence_model = .false.
+    load_saved_model = .true.
+    load_model_filename  = 'zams_066.mod'
+
+  ! save a model at the end of the run
+    save_model_when_terminate = .true.
+    save_model_filename = 'final.mod'
+
+  ! display on-screen plots
+    pgstar_flag = .true.
+
+/ ! end of star_job namelist
+
+
+&eos
+  ! eos options
+  ! see eos/defaults/eos.defaults
+
+/ ! end of eos namelist
+
+
+&kap
+  ! kap options
+  ! see kap/defaults/kap.defaults
+  use_Type2_opacities = .true.
+  Zbase = 0.038
+
+/ ! end of kap namelist
+
+
+&controls
+  ! see star/defaults/controls.defaults
+
+  ! starting specifications
+
+  ! when to stop
+
+    ! stop when the star nears ZAMS (Lnuc/L > 0.99)
+    stop_at_phase_WDCS = .true.
+
+  ! wind
+
+  ! atmosphere
+
+  ! rotation
+
+  ! element diffusion
+
+  ! mlt
+
+  ! mixing
+
+  ! timesteps
+  time_delta_coeff = 1.5d-1
+
+  ! mesh
+  mesh_delta_coeff = 4d-1
+
+  ! solver
+     ! options for energy conservation (see MESA V, Section 3)
+     energy_eqn_option = 'dedt'
+     use_gold_tolerances = .true.
+
+  ! output
+
+/ ! end of controls namelist
