@@ -1,0 +1,19 @@
+#!/bin/bash
+
+rm -f restart_photo
+
+function inlist_fi {
+	echo "copying inlist"
+	cp $1 inlist
+	./star
+	cp $2 inlist
+	./star
+	mv final.mod $1.mod
+	images_to_movie 'png/grid6_*.png' grid6.mp4
+	images_to_movie 'png/kipp_*.png' kipp.mp4
+	rm -rf png
+}
+
+date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"
+inlist_fi inlist_zams inlist_main
+date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"
